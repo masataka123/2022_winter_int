@@ -1,0 +1,137 @@
+\documentclass[dvipdfmx,a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvipdfmx]{hyperref} %リンクを有効にする
+\usepackage{url} %同上
+\usepackage{amsmath,amssymb} %もちろん
+\usepackage{amsfonts,amsthm,mathtools} %もちろん
+\usepackage{braket,physics} %あると便利なやつ
+\usepackage{bm} %ラプラシアンで使った
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry} %余白設定
+\usepackage{latexsym} %ごくたまに必要になる
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage{otf} %宗教上の理由でmin10が嫌いなので
+
+
+\usepackage[all]{xy}
+\usepackage{amsthm,amsmath,amssymb,comment}
+\usepackage{amsmath}    % \UTF{00E6}\UTF{0095}°\UTF{00E5}\UTF{00AD}\UTF{00A6}\UTF{00E7}\UTF{0094}¨
+\usepackage{amssymb}  
+\usepackage{color}
+\usepackage{amscd}
+\usepackage{amsthm}  
+\usepackage{wrapfig}
+\usepackage{comment}	
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{pxrubrica}
+\usepackage{enumitem}
+\usepackage{mathrsfs} 
+\usepackage{caption}
+
+\setstretch{1.2}
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Sin}{\text{Sin}^{-1}} 
+\newcommand{\Cos}{\text{Cos}^{-1}} 
+\newcommand{\Tan}{\text{Tan}^{-1}} 
+\newcommand{\invsin}{\text{Sin}^{-1}} 
+\newcommand{\invcos}{\text{Cos}^{-1}} 
+\newcommand{\invtan}{\text{Tan}^{-1}} 
+\newcommand{\Area}{\text{Area}}
+\newcommand{\vol}{\text{Vol}}
+\newcommand{\maru}[1]{\raise0.2ex\hbox{\textcircled{\tiny{#1}}}}
+\newcommand{\sgn}{{\rm sgn}}
+%\newcommand{\rank}{{\rm rank}}
+
+
+
+   %当然のようにやる．
+\allowdisplaybreaks[4]
+   %もちろん．
+%\title{第1回. 多変数の連続写像 (岩井雅崇, 2020/10/06)}
+%\author{岩井雅崇}
+%\date{2020/10/06}
+%ここまで今回の記事関係ない
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{claim}[thm]{主張}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注意}
+\newtheorem{exa}[thm]{例}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{prob}[thm]{問題}
+\newtheorem{rema}[thm]{補足}
+
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+ \newcommand{\pdrv}[2]{\frac{\partial #1}{\partial #2}}
+ \newcommand{\drv}[2]{\frac{d #1}{d#2}}
+  \newcommand{\ppdrv}[3]{\frac{\partial #1}{\partial #2 \partial #3}}
+
+
+%ここから本文．
+\begin{document}
+%\maketitle
+
+\newpage
+\begin{center}
+{\Large 2022年度秋冬学期 大阪大学 全学共通教育科目 \\ 火曜2限 基礎解析学II (理(化))} \\
+火曜2限(10:30-12:00) 豊中総合学館302
+\end{center}
+\begin{flushright}
+ 岩井雅崇(いわいまさたか) 2022/10/04 \\
+\end{flushright}
+{\large 基本的事項}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+\item この授業は対面授業です. 火曜2限(10:30-12:00)に豊中総合学館302にて授業を行います.
+\item 授業ホームページ(\url{https://masataka123.github.io/2022_winter_int/})にて授業資料等をアップロードしていきます. 
+下に授業ホームページのQRコードを貼っておきます. 
+\begin{figure}[htbp]
+\begin{center}
+ \includegraphics[height=30mm, width=30mm]{cal2.png}
+ \caption*{授業のQRコード}
+\end{center}
+\end{figure}
+\end{itemize}
+
+\hspace{-18pt}{\large 授業の予定}
+\begin{enumerate}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+  \item 一変数の積分の定義と計算方法
+  \item 多変数の積分の定義と計算方法
+  \item 広義積分とガウス積分
+  \item 線績分とグリーンの定理
+  \item 授業のまとめ(試験対策)
+ \end{enumerate}
+ 
+\hspace{-18pt}{\large 成績に関して}
+
+期末試験のみで成績をつける予定です.  出席点はありません. 試験内容は広義積分までを考えております.(ガンマ関数は出さない可能性あり). 「授業のまとめ(試験対策)」の授業ができれば, そのときに詳しい試験内容を言います. 
+
+\vspace{11pt}
+\hspace{-18pt}{\large その他}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+   % \item 授業内容をあまり把握していないので, 演習問題と授業内容が噛み合ってない可能性があります.
+  \item 休講あるいは補講をすることがあるので, こまめにホームページとCLEは確認してください.
+    \item オフィスアワーを月曜15:00-17:00に設けています. この時間に私の研究室に来ても構いません(ただし来る場合は前もって連絡してくれると助かります.)
+ \end{itemize}
+
+
+
+ \end{document}
