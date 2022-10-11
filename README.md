@@ -85,7 +85,8 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - 第1回 (2022/10/04). ガイダンス [ガイダンスの資料](https://github.com/masataka123/2022_winter_int/blob/master/material/0_ガイダンス資料.pdf)
 
-- 第2回 (2022/10/11). 
+- 第2回 (2022/10/11). 一変数の積分 -微分積分学の基本定理- [授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/2_授業板書.pdf)
+
 
 - 第3回 (2022/10/18). 
 
