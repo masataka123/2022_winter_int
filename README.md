@@ -89,7 +89,7 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - 第3回 (2022/10/18). 一変数の積分 -積分の性質と計算方法- [第3回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/3_授業板書.pdf)
 
-- 第4回 (2022/10/25). 
+- 第4回 (2022/10/25). 重積分 -重積分の定義- [第4回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/4_授業板書.pdf)
 
 - 第5回 (2022/11/01). 
 
