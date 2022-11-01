@@ -78,6 +78,7 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 
 授業資料は授業の内容を要約した資料です. 基本的にはこの内容に沿って授業をします. 資料に関してはクリックすると見れるようになります. もし見れない場合は右上に"download"ボタンがあるのでそれをクリックするとダウンロードできます.
+
 (2022/10/04 注: CLEからこのページを見るとダウンロードできない可能性があります. その場合はhttps://masataka123.github.io/2022_winter_int/とリンクを打ってCLE外から見てください. )
 
 # 授業の板書の画像
@@ -85,13 +86,13 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - 第1回 (2022/10/04). ガイダンス [ガイダンスの資料](https://github.com/masataka123/2022_winter_int/blob/master/material/0_ガイダンス資料.pdf)
 
-- 第2回 (2022/10/11). 一変数の積分 -微分積分学の基本定理- [第2回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/2_授業板書.pdf)
+- 第2回 (2022/10/11). 一変数の積分1 -微分積分学の基本定理- [第2回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/2_授業板書.pdf)
 
-- 第3回 (2022/10/18). 一変数の積分 -積分の性質と計算方法- [第3回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/3_授業板書.pdf)
+- 第3回 (2022/10/18). 一変数の積分2 -積分の性質と計算方法- [第3回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/3_授業板書.pdf)
 
-- 第4回 (2022/10/25). 重積分 -重積分の定義- [第4回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/4_授業板書.pdf)
+- 第4回 (2022/10/25). 重積分1 -重積分の定義- [第4回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/4_授業板書.pdf)
 
-- 第5回 (2022/11/01). 
+- 第5回 (2022/11/01). 重積分2 -累次積分- [第5回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/5_授業板書.pdf)
 
 - 第6回 (2022/11/08). 
 
