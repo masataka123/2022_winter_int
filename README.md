@@ -94,7 +94,7 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - 第5回 (2022/11/01). 重積分2 -累次積分- [第5回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/5_授業板書.pdf)
 
-- 第6回 (2022/11/08). 重積分3 -重積分の変数変換公式- [第5回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/6_授業板書.pdf)
+- 第6回 (2022/11/08). 重積分3 -重積分の変数変換公式- [第6回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/6_授業板書.pdf)
 
 - 第7回 (2022/11/15). 
 
