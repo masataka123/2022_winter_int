@@ -101,7 +101,7 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - 第8回 (2022/11/22). 広義積分1 -広義積分の定義とガウス積分- [第8回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/8_授業板書.pdf)
 
-- 第9回 (2022/12/06). 
+- 第9回 (2022/12/06). 広義積分2 -ガンマ関数とベータ関数- [第9回授業板書](https://github.com/masataka123/2022_winter_int/blob/master/material/9_授業板書.pdf)
 
 - 第10回 (2022/12/13). 
 
