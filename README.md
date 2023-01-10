@@ -107,7 +107,7 @@ CLEにも同じものをアップロードしております. ダウンロード
 
 - (2022/12/20). 休講
 
-- 第11回 (2023/01/10). 演習(期末試験対策) [演習問題・解答](https://github.com/masataka123/2022_winter_int/blob/master/material/10_授業板書.pdf)
+- 第11回 (2023/01/10). 演習(期末試験対策) [演習問題・解答](https://github.com/masataka123/2022_winter_int/blob/master/material/0_演習問題.pdf)
 
 - 第12回 (2023/01/17). 
 
