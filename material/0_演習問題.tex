@@ -370,24 +370,70 @@ $$
 =\lim_{x \rightarrow +\infty}\frac{\log x}{x^{\epsilon}}
 =0
 $$
-であるので, $[1, + \infty)$上で$\frac{f(x)}{x^{p+\epsilon}}$は有界である.\footnote{ここを正確に述べると, $\lim_{x \rightarrow +\infty}\frac{f(x)}{x^{p+\epsilon}}=0$より, ある$R>0$があって, $[R, + \infty)$上で$|\frac{f(x)}{x^{p+\epsilon}}| <1$となる. 一方$[1,R]$上で$\frac{f(x)}{x^{p+\epsilon}}$は最大値・最小値を持つので(閉区間上の連続関数は最大値を持つ), ある$M>0$があって,  $[1, R]$上で$|\frac{f(x)}{x^{p+\epsilon}}| <M$となる. よって, $[1, + \infty)$上で$|\frac{f(x)}{x^{p+\epsilon}}| < 1+M$となる. よって有界である.}
+であるので, $[1, + \infty)$上で$\frac{f(x)}{x^{p+\epsilon}}$は有界である.
+%\footnote{ここを正確に述べると, $\lim_{x \rightarrow +\infty}\frac{f(x)}{x^{p+\epsilon}}=0$より, ある$R>0$があって, $[R, + \infty)$上で$|\frac{f(x)}{x^{p+\epsilon}}| <1$となる. 一方$[1,R]$上で$\frac{f(x)}{x^{p+\epsilon}}$は最大値・最小値を持つので(閉区間上の連続関数は最大値を持つ), ある$M>0$があって,  $[1, R]$上で$|\frac{f(x)}{x^{p+\epsilon}}| <M$となる. よって, $[1, + \infty)$上で$|\frac{f(x)}{x^{p+\epsilon}}| < 1+M$となる. よって有界である.}
 つまりある$C>0$があって, $[1, + \infty)$上で$|\frac{f(x)}{x^{p+\epsilon}}| < C$となる.
-以上より, $[1, + \infty)$上で$|f(x)| < C{x^{p+\epsilon}}$かつ, 広義積分$\int_{1}^{\infty}C{x^{p+\epsilon}}dx$は$p+\epsilon<-1$より収束するので, 広義積分$\int_{1}^{\infty} f(x) dx$も収束する.
+以上より, $[1, + \infty)$上で$|f(x)| < C{x^{p+\epsilon}}$かつ, 広義積分$\int_{1}^{\infty}C{x^{p+\epsilon}}dx$は$p+\epsilon<-1$より収束するので, \underline{第8回授業の広義積分の収束判定法から}広義積分$\int_{1}^{\infty} f(x) dx$も収束する.
 
 \vspace{11pt}
 
 {\large(2). $p\geqq -1$ならば広義積分$\int_{1}^{\infty} f(x) dx$は発散することを示せ.}
 
 \hspace{-11pt}(解.)
-$3 \leqq x$ならば$1 \leqq \log x$であるので, $[3, + \infty)$上で$x^p\leqq x^p\log x$である. また広義積分$\int_{3}^{\infty} x^p dx$は$p\geqq -1$であるので$+ \infty$に発散する. よって広義積分$\int_{3}^{\infty} f(x) dx$も$+ \infty$に発散する. 以上より広義積分$\int_{1}^{\infty} f(x) dx$も$+ \infty$に発散する.
+$3 \leqq x$ならば$1 \leqq \log x$であるので, $[3, + \infty)$上で$x^p\leqq x^p\log x$である. また広義積分$\int_{3}^{\infty} x^p dx$は$p\geqq -1$であるので$+ \infty$に発散する. よって\underline{第8回授業の広義積分の収束判定法から}広義積分$\int_{3}^{\infty} f(x) dx$も$+ \infty$に発散する. 以上より広義積分$\int_{1}^{\infty} f(x) dx$も$+ \infty$に発散する.
 
+\vspace{11pt}
+[補足1.] 上の議論に関して使っている定理は次のものである.
+ \begin{thm}
+$[1, +\infty)$上の連続関数$g(x)$について, ある定数$B>0$があって$\lim_{x \rightarrow +\infty}g(x)=B$ならば, ある定数$C>0$があって$g(x) < C$となる. 
+ \end{thm}
 
-
-
-
+(証.) $\lim_{x \rightarrow +\infty}g(x)=B$より, ある$R>0$があって, $[R, + \infty)$上で$|g(x)| < B+1$となる. 一方$[1,R]$上で$g(x)$は最大値・最小値を持つので(閉区間上の連続関数は最大値を持つ), ある$M>0$があって,  $[1, R]$上で$|g(x)| <M$となる. よって, $[1, + \infty)$上で$|g(x) |< 1+M+B =C$となる. 
   
+[補足2.]  前バージョンで「どのようにして収束判定したのかわからない」というコメントがあった. 使っている収束判定法は次のものである.
+  \begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries,
+    breakable = true]
+    \begin{thm}
+$f(x)$を$[a,b)$上の連続関数とする.
+$[a,b)$上の連続関数$g(x)$があって, $[a , b)$上で$|f(x)| \leqq g(x)$かつ広義積分$\int_{a}^{b} g(x) dx$が収束すると仮定する.
+このとき広義積分$\int_{a}^{b} f(x) dx$もまた収束する.
+ \end{thm}
+ \end{tcolorbox}
+ 
+   \begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries,
+    breakable = true]
+    \begin{thm}
+$f(x)$を$[a,b)$上の連続関数とする.
+$[a,b)$上の連続関数$g(x)$があって, $[a , b)$上で$0 \leqq g(x) \leqq f(x)$かつ広義積分$\int_{a}^{b} g(x) dx$が発散すると仮定する.
+このとき広義積分$\int_{a}^{b} f(x) dx$もまた発散する.
+ \end{thm}
+ \end{tcolorbox}
 
+ 
+ \begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries,
+    breakable = true]
+    \begin{thm}[広義積分の判定法]
+    \label{kougi}
+$f(x)$を$[a,b)$上の連続関数とする.
+\begin{enumerate}
+\item $b=+ \infty$のとき, ある$\lambda >1$があって, $f(x)x^{\lambda}$が
+$[a, +\infty)$上で有界ならば, 広義積分$\int_{a}^{\infty} f(x)dx $は収束する.
+\item $b$が実数のとき($b <+ \infty$のとき), ある$\mu <1$があって, $f(x)(x-b)^{\mu}$が
+$[a, b)$上で有界ならば, 広義積分$\int_{a}^{b} f(x)dx $は収束する.
+\end{enumerate}
+ \end{thm}
+ \end{tcolorbox}
 
+この解答では「定理2と定理3」または「定理4」を用いて収束判定をしていることがわかる.
  
  \end{document}
  
