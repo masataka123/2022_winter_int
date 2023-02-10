@@ -1,0 +1,223 @@
+\documentclass[dvipdfmx,a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvipdfmx]{hyperref} %リンクを有効にする
+\usepackage{url} %同上
+\usepackage{amsmath,amssymb} %もちろん
+\usepackage{amsfonts,amsthm,mathtools} %もちろん
+\usepackage{braket,physics} %あると便利なやつ
+\usepackage{bm} %ラプラシアンで使った
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry} %余白設定
+\usepackage{latexsym} %ごくたまに必要になる
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage{otf} %宗教上の理由でmin10が嫌いなので
+
+
+\usepackage[all]{xy}
+\usepackage{amsthm,amsmath,amssymb,comment}
+\usepackage{amsmath}    % \UTF{00E6}\UTF{0095}°\UTF{00E5}\UTF{00AD}\UTF{00A6}\UTF{00E7}\UTF{0094}¨
+\usepackage{amssymb}  
+\usepackage{color}
+\usepackage{amscd}
+\usepackage{amsthm}  
+\usepackage{wrapfig}
+\usepackage{comment}	
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{pxrubrica}
+\usepackage{enumitem}
+\usepackage{mathrsfs} 
+\usepackage[dvipdfmx]{hyperref}
+\setstretch{1.2}
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Sin}{\text{Sin}^{-1}} 
+\newcommand{\Cos}{\text{Cos}^{-1}} 
+\newcommand{\Tan}{\text{Tan}^{-1}} 
+\newcommand{\invsin}{\text{Sin}^{-1}} 
+\newcommand{\invcos}{\text{Cos}^{-1}} 
+\newcommand{\invtan}{\text{Tan}^{-1}} 
+\newcommand{\Area}{S}
+\newcommand{\vol}{\text{Vol}}
+\newcommand{\maru}[1]{\raise0.2ex\hbox{\textcircled{\tiny{#1}}}}
+\newcommand{\sgn}{{\rm sgn}}
+%\newcommand{\rank}{{\rm rank}}
+
+
+
+   %当然のようにやる．
+\allowdisplaybreaks[4]
+   %もちろん．
+%\title{第1回. 多変数の連続写像 (岩井雅崇, 2020/10/06)}
+%\author{岩井雅崇}
+%\date{2020/10/06}
+%ここまで今回の記事関係ない
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{claim}[thm]{主張}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注意}
+\newtheorem{exa}[thm]{例}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{prob}[thm]{問題}
+\newtheorem{rema}[thm]{補足}
+\newtheorem{dfnthm}[thm]{定義・定理}
+
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+ \newcommand{\pdrv}[2]{\frac{\partial #1}{\partial #2}}
+ \newcommand{\drv}[2]{\frac{d #1}{d#2}}
+  \newcommand{\ppdrv}[3]{\frac{\partial #1}{\partial #2 \partial #3}}
+
+
+\begin{document}
+\begin{center}
+{\Large 期末試験 (基礎解析学2)}
+
+{\small 2022年度秋冬学期 大阪大学 全学共通教育科目 火曜2限 基礎解析学II (理(化))}
+\end{center}
+
+\begin{flushright}
+ 岩井雅崇(いわいまさたか) 2023/02/07
+\end{flushright}
+
+\vspace{44pt}
+{\Large 第1問.} 重積分の計算問題(2次元)
+\vspace{11pt}
+
+%{\large(1). $D=\{ (x,y) \in \R^2 : 0 \leqq y, \text{\,} 0 \leqq x-y, \text{\,} x+y \leqq 2\}$とする.重積分$\iint_{D} (x^2-y^2)dxdy$のを求めよ.}\vspace{5pt}
+
+%{\large(2). $D= \{ (x,y)\in \R^2 | \sqrt{x^2 + y^2 } \leqq 1  \}$とする. $\iint_{D} e^{-x^2-y^2}dxdy$を求めよ. }\vspace{5pt}
+
+{\large(1). $D=\{ (x,y) \in \R^2  \,|\,  y \leqq x, x \leqq 1, 0 \leqq y  \}$とする. 重積分$\iint_{D} x^2y \, dxdy$の値を求めよ.}\vspace{7pt}
+
+{\large(2). $D=\{ (x,y) \in \R^2 \,|\, x^2 + y^2 \leqq x\}$とする.
+重積分$\iint_{D} \sqrt{x}\,dxdy$の値を求めよ.}\vspace{7pt}
+
+%{\large(3). $D=\{ (x,y) \in \R^2 \,|\, x^2 + y^2 \leqq 1\}$とする. 重積分$\iint_{D}\frac{1}{(1+x^2+y^2)^2} \, dxdy$の値を求めよ.}\vspace{7pt}
+
+%{\large(3). $D=\{ (x,y) \in \R^2 \,|\,|x+2| \leqq 2, |x - 3y| \leqq 2\}$とする.重積分$\iint_{D} \sqrt{x}\,dxdy$の値を求めよ.}\vspace{7pt}
+
+{\large(3). $D=\{ (x,y) \in \R^2 \,|\, 0 \leqq x+y \leqq 2, 0 \leqq x-y \leqq 2\}$とする.重積分$\iint_{D} (x-y)e^{x+y}\,dxdy$の値を求めよ.}\vspace{7pt}
+
+{\large(4). $D=\{ (x,y) \in \R^2 \,|\, 0 \leqq x, 0 \leqq y,  x+y \leqq 1\}$とする.
+重積分$\iint_{D} \frac{1}{1 + (x+y)^2}\,dxdy$の値を求めよ.}\vspace{7pt}
+
+%{\large(3). $D=\{ (x,y) \in \R^2  \,|\,  0 \leqq x, \text{\,}  0 \leqq y,\text{\,} \sqrt{x} + \sqrt{y} \leqq 1\}$とする. 重積分$\iint_{D} x^2dxdy$の値を求めよ.}\vspace{7pt}
+
+
+\vspace{33pt}
+{\Large 第2問.} 重積分の計算問題(3次元) 
+\vspace{11pt}
+
+{\large(1). $a$を正の実数とする. 円柱$V_1= \{ (x,y,z) \in \R^3 \,|\,x^2 + y^2 \leqq a^2\}$と円柱$V_2 = \{ (x,y,z) \in \R^3 \,|\, y^2 + z^2 \leqq a^2 \}$の共通部分$V_1 \cap V_2$の体積を求めよ.}\vspace{4pt}
+
+{\large(2). $V=\{ (x,y,z) \in \R^3 \,|\,  0 \leqq x, 0 \leqq y, 0 \leqq z, x^2+y^2+z^2 \leqq 1\}$とする.重積分$\iiint_{V} z \text{\,}dxdydz$の値を求めよ.}
+
+%{\large(2). $a$を正の実数とする. 円柱$V_1= \{ (x,y,z) \in \R^3 \,|\,x^2 + y^2 \leqq a^2\}$と球$V_2 = \{ (x,y,z) \in \R^3 \,|\, x^2 + y^2 + z^2 \leqq a^2 \}$の共通部分$V_1 \cap V_2$の体積を求めよ.}\vspace{4pt}
+
+%{\large(2). $V=\{ (x,y,z) \in \R^3 \,|\,  0 \leqq x, 0 \leqq y, 0 \leqq z, x^2+y^2+z^2 \leqq 1\}$とする.重積分$\iiint_{V} xyz \text{\,}dxdydz$の値を求めよ.}
+
+\vspace{33pt}
+{\Large 第3問.} 広義積分・ガウス積分
+\vspace{11pt}
+
+
+{\large(1). 広義積分$\int_{- \infty}^{\infty} e^{- x^2} dx$は収束することを示せ.}\vspace{7pt}
+
+{\large(2). $a$を正の実数とし, $D_{a} = \{  (x,y) \in \R^2 \,|\,x^2 + y^2 \leqq a^2\}$とおく. 次の不等式が成り立つことを示せ.}
+$$
+\iint_{D_a} e^{-x^2 - y^2} dxdy \leqq \left(\int_{-a}^{a} e^{- x^2} dx  \right)^{2} \leqq \iint_{D_{2 a}} e^{-x^2 - y^2} dxdy \
+$$
+\vspace{7pt}
+
+{\large(3). 広義積分$\int_{-\infty}^{\infty} e^{- x^2} dx$の値を求めよ.}\vspace{7pt}
+
+  \begin{flushright}
+ {\LARGE おまけの問題に続く.}
+ \end{flushright}
+ 
+ \newpage
+ 
+
+\vspace{44pt}
+{\Large おまけ問題.} 積分の定義
+\vspace{11pt}
+
+(1). 関数$g : [0,1] \rightarrow \R$を
+$$g(x)= \begin{cases} \frac{1}{q}& (\text{$x$が有理数で互いに素な0以上の整数$p,q$を用いて$x=\frac{p}{q}$と表せれるとき.})\\
+0& (\text{$x$が無理数のとき})\end{cases}
+$$
+とする. (ただし$g(0)=0$とする.) $g(x)$は$[0,1]$上でリーマン積分可能か判定せよ. \vspace{15pt}
+
+
+(2). 次の定理はバナッハ・タルスキーの定理とよばれる.
+
+\begin{thm}[Banach-Tarski 1924]
+3次元空間内の半径1の球体を有限個に分割したのち、それらのパーツを平行移動したり回転させたりして組み合わせることにより半径1の球体を2個作ることが出来る.
+\end{thm}
+
+バナッハ・タルスキーの定理を用いた$1=2$の証明がある. 
+これは次のとおりである.\footnote{「半径1の球体1個が2個になったから$1=2$」というのをより論理的に書いたものである.}
+
+\begin{proof}[証明$??$]
+3次元空間内の半径1の球体$D $とすると, バナッハ・タルスキーの定理から, $D$は互いに交わらない有限個の$\R^3$の集合$A_1, \ldots, A_N, B_1, \ldots, B_N$に分割できて, $A_1, \ldots, A_N$を並行移動したり回転させたりして組み合わせると$D$になり, $B_1, \ldots, B_N$を並行移動したり回転させたりして組み合わせると$D$になる. 
+よって空間図形$C$の体積$v(C)$と表すことにすると, 
+\begin{align*}
+\begin{split}
+v(D) &= v( A_1) + \cdots + v(A_N) + v( B_1)+ \cdots +v(B_N) \quad {\footnotesize\text{(互いに交わらないから.)}}\\
+& = v(D )   + v( B_1)+ \cdots +v(B_N)  \quad{\footnotesize\text{($A_1, \ldots, A_N$を並行移動・回転で組み合わせると$D$になるから.)}}\\&= v(D )   + v(D )\quad{\footnotesize\text{($B_1, \ldots, B_N$を並行移動・回転で組み合わせると$D$になるから.)}}
+\end{split}
+\end{align*}
+半径1の球体$D $の体積$v(D)$は0ではないので, 上の式から$1=2$を得る. 
+\end{proof}
+
+もちろん上の証明には間違いがある. その間違いを指摘せよ. 
+
+\begin{comment}
+
+%\vspace{22pt}
+{\Large 第4問.} 広義積分
+\vspace{11pt}
+
+
+{\large$p$を実数とする. 広義積分$$\int_{1}^{\infty}  (2+7\sqrt{x})^{2p} \log x \, dx$$が収束するような$p$の範囲を求めよ.}
+%\vspace{11pt}
+
+%{\large(1). $p< -1$ならば広義積分$\int_{1}^{\infty} f(x) dx$は収束することを示せ．}\vspace{7pt}
+
+%{\large(2). $p\geqq -1$ならば広義積分$\int_{1}^{\infty} f(x) dx$は発散することを示せ.}
+
+
+\begin{proof}[証明??]
+3次元空間内の半径1の球体$D = \{ (x,y,z) \in \R^3 \,|\, x^2 + y^2 + z^2 \leqq 1\}$とする. バナッハ・タルスキーの定理からある有限個の$\R^3$の集合$A_1, \ldots, A_N, B_1, \ldots, B_N$があって, 
+$$
+D = A_1 \cup \cdots \cup A_N \cup B_1 \cup \ldots B_N
+$$
+かつ$A_1, \ldots, A_N, B_1, \ldots, B_N$は互いに交わらない. 
+さらに$A_1, \ldots, A_N$を並行移動したり回転させたりして組み合わせると$D$になり, $B_1, \ldots, B_N$を並行移動したり回転させたりして組み合わせると$D$になる. 
+
+よって空間図形$C$の体積$v(C)$と表すことにすると, 
+$$
+v(D) = v( A_1 \cup \cdots \cup A_N \cup B_1 \cup \ldots B_N)
+= v( A_1)\\cdots \cup A_N ) 
+$$
+\end{proof}
+
+もちろん上の証明には間違いがある. その間違いを指摘せよ. } 
+\end{comment}
+
+ \end{document}
+ 
+
+ 
